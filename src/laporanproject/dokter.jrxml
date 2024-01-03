@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="dokter" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e58171bf-f0b2-4a02-988c-bdb49a2d64cd">
+	<property name="com.jaspersoft.studio.data.sql.tables">
+		<![CDATA[cGVsYXlhbmFuX2tlc2VoYXRhbi5kb2t0ZXIgQVMgLDExOCw2NCxlYzAxN2UxMi04MDdlLTRkMGIt
+YThhNS0wNzlmNmEwNzlkZWE7]]>
+	</property>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Pelayanan Kesehatan Adapter"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT id_dokter,
+	nama_dokter,
+	jenis_dokter,
+	spesialis,
+	jadwal
+FROM pelayanan_kesehatan.dokter]]>
+	</queryString>
+	<field name="id_dokter" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="id_dokter"/>
+		<property name="com.jaspersoft.studio.field.label" value="id_dokter"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="dokter"/>
+	</field>
+	<field name="nama_dokter" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nama_dokter"/>
+		<property name="com.jaspersoft.studio.field.label" value="nama_dokter"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="dokter"/>
+	</field>
+	<field name="jenis_dokter" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="jenis_dokter"/>
+		<property name="com.jaspersoft.studio.field.label" value="jenis_dokter"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="dokter"/>
+	</field>
+	<field name="spesialis" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="spesialis"/>
+		<property name="com.jaspersoft.studio.field.label" value="spesialis"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="dokter"/>
+	</field>
+	<field name="jadwal" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="jadwal"/>
+		<property name="com.jaspersoft.studio.field.label" value="jadwal"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="dokter"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="100" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image>
+				<reportElement x="19" y="-3" width="72" height="89" uuid="5a20be19-46ea-460c-a986-3e00534067a0"/>
+				<imageExpression><![CDATA["C:/Users/ASUS/Downloads/logo-puskesmas.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="167" y="9" width="220" height="30" uuid="4d1cb986-e36e-4fb7-80c7-9780f09e1bdb"/>
+				<textElement textAlignment="Center">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PUSKESMAS XYZ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="49" width="170" height="30" uuid="5c0c6a0e-be1c-43aa-8f01-ffc5f0ac591c"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Kp.Jatijajar, Depok]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="36" splitType="Stretch">
+			<rectangle>
+				<reportElement x="-20" y="-5" width="595" height="41" uuid="70e46645-ad6e-4fb3-8584-0b15e208ddc8"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="67" y="2" width="440" height="30" uuid="92c1a26f-8459-48e3-a28d-a2189e67e416"/>
+				<textElement textAlignment="Center">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Laporan Data Dokter]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="31" width="111" height="30" uuid="6b901b18-eefd-4957-82d0-daa092744fba">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c0752484-9b41-4bd8-a117-662350376206"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[ID Dokter]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="121" y="31" width="111" height="30" uuid="b042eb41-e4f6-43b5-bf40-804e3f8c60fd">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b0fda951-2e32-456d-9b97-2b5d4da1d56b"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nama Dokter]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="232" y="31" width="111" height="30" uuid="66185042-25ab-4bd1-bd56-79ad5cf64edf">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="06caa386-ae7d-413a-9c72-bc983bedc2a5"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Jenis Dokter]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="343" y="31" width="111" height="30" uuid="eae60129-73f4-46b8-b92a-117f9990e86f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="931fc389-b1bb-499c-a64b-8b55ebbc6ac9"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Spesialis]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="454" y="31" width="111" height="30" uuid="3fca786b-f70b-4bdb-ac10-7bcce3e74dc7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5a449c6c-1281-4e84-a6ab-2c656a29a103"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Jadwal]]></text>
+			</staticText>
+			<line>
+				<reportElement x="3" y="52" width="520" height="1" uuid="9122b7d5-0d62-44e1-ad15-1c6a5692b023"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="7" y="0" width="111" height="30" uuid="eba6e539-d4c9-46b3-a530-ab20b985e3b0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c0752484-9b41-4bd8-a117-662350376206"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id_dokter}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="118" y="0" width="111" height="30" uuid="c216ca42-602b-41d2-bf1b-aeab6ca5d831">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b0fda951-2e32-456d-9b97-2b5d4da1d56b"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama_dokter}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="229" y="0" width="111" height="30" uuid="c46a83d1-8b2c-416a-bd69-e1f523200fcc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="06caa386-ae7d-413a-9c72-bc983bedc2a5"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jenis_dokter}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="0" width="111" height="30" uuid="2eb2a118-84b0-455f-8100-29734e99c167">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="931fc389-b1bb-499c-a64b-8b55ebbc6ac9"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{spesialis}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="451" y="0" width="111" height="30" uuid="888f81c5-4122-469f-84a2-3015f8632234">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5a449c6c-1281-4e84-a6ab-2c656a29a103"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jadwal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

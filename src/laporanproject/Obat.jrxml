@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Obat" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="357747c1-901d-4bd6-94d5-ad3139fb875f">
+	<property name="com.jaspersoft.studio.data.sql.tables">
+		<![CDATA[cGVsYXlhbmFuX2tlc2VoYXRhbi5vYmF0IEFTICwxNzQsMjgsNWNkOTA0MDgtYTFkZC00ZTIyLTlm
+NzUtYTY4OTUyZDNkYjU4Ow==]]>
+	</property>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Pelayanan Kesehatan Adapter"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT kode_obat,
+	nama_obat,
+	jenis_obat,
+	harga,
+	satuan,
+	stok
+FROM pelayanan_kesehatan.obat]]>
+	</queryString>
+	<field name="kode_obat" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="kode_obat"/>
+		<property name="com.jaspersoft.studio.field.label" value="kode_obat"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="obat"/>
+	</field>
+	<field name="nama_obat" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nama_obat"/>
+		<property name="com.jaspersoft.studio.field.label" value="nama_obat"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="obat"/>
+	</field>
+	<field name="jenis_obat" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="jenis_obat"/>
+		<property name="com.jaspersoft.studio.field.label" value="jenis_obat"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="obat"/>
+	</field>
+	<field name="harga" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="harga"/>
+		<property name="com.jaspersoft.studio.field.label" value="harga"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="obat"/>
+	</field>
+	<field name="satuan" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="satuan"/>
+		<property name="com.jaspersoft.studio.field.label" value="satuan"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="obat"/>
+	</field>
+	<field name="stok" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="stok"/>
+		<property name="com.jaspersoft.studio.field.label" value="stok"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="obat"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="100" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="200" y="49" width="170" height="30" uuid="f8503c8c-8cd3-45e9-957b-3bd57b705a41"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Kp.Jatijajar, Depok]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="167" y="9" width="220" height="30" uuid="023e1da0-195e-422c-b3e4-cccd17e3cf7b"/>
+				<textElement textAlignment="Center">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PUSKESMAS XYZ]]></text>
+			</staticText>
+			<image>
+				<reportElement x="19" y="-3" width="72" height="89" uuid="60eeb52c-a433-48d3-8806-0ceff42edaeb"/>
+				<imageExpression><![CDATA["C:/Users/ASUS/Downloads/logo-puskesmas.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="36" splitType="Stretch">
+			<rectangle>
+				<reportElement x="-20" y="-5" width="595" height="41" uuid="c3308c06-71a1-41ca-875c-9da5a9129f5c"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="67" y="2" width="440" height="30" uuid="7b864db0-ccb9-4e4a-9ed8-8c5e92e9329e"/>
+				<textElement textAlignment="Center">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Laporan Data Obat]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="70" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="0" y="31" width="95" height="30" uuid="af37b143-f5e0-40b5-b46f-bd82ae10a849">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="36534d5f-8aad-4aa8-a93f-2ab0af1e2bea"/>
+				</reportElement>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Kode Obat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="95" y="31" width="92" height="30" uuid="f461b62d-d88d-4e22-b0b2-1d485def16b9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5daadb84-9b78-42b2-bf3c-03011c4e54a2"/>
+				</reportElement>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nama Obat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="187" y="31" width="103" height="30" uuid="7b003d3d-d24a-4aba-9123-ebae67c7e4dc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="49855614-17b1-43af-a44c-01e692510dcd"/>
+				</reportElement>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Jenis Obat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="31" width="81" height="30" uuid="b8ae6209-42a2-4423-921a-355c468ce77d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9de99d2b-39d0-4117-9a9e-80fe81b14a4a"/>
+				</reportElement>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Harga]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="371" y="31" width="92" height="30" uuid="e3685c69-95e5-4beb-9246-d21fe8002794">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="18dc62a7-026f-4fec-bd5e-1651f807ff90"/>
+				</reportElement>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Satuan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="463" y="31" width="92" height="30" uuid="cbe0b36d-3809-4083-9a5a-4e0df1cdfd42">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6b022a06-cbde-4e80-b74a-82531a0a25d6"/>
+				</reportElement>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Stok]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="64" width="542" height="1" uuid="eaf19311-1145-4024-aaaf-75948390d09b"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="0" y="0" width="95" height="30" uuid="8b59ef09-2f9d-4e76-a635-3f71e84de971">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="36534d5f-8aad-4aa8-a93f-2ab0af1e2bea"/>
+				</reportElement>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kode_obat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="95" y="0" width="92" height="30" uuid="e639b539-ec5e-497f-adbd-8fac8d40644d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5daadb84-9b78-42b2-bf3c-03011c4e54a2"/>
+				</reportElement>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama_obat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="187" y="0" width="103" height="30" uuid="9e9ffe41-67a9-4fa0-854f-bf70f1530175">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="49855614-17b1-43af-a44c-01e692510dcd"/>
+				</reportElement>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jenis_obat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="0" width="81" height="30" uuid="1370fde9-a21b-4b72-a7dc-644e9953e867">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9de99d2b-39d0-4117-9a9e-80fe81b14a4a"/>
+				</reportElement>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{harga}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="371" y="0" width="92" height="30" uuid="36b0a03c-c450-467f-bd3d-e926ebfdad3c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="18dc62a7-026f-4fec-bd5e-1651f807ff90"/>
+				</reportElement>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{satuan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="463" y="0" width="92" height="30" uuid="28dc6328-ca90-4374-9cfd-07fe4626a74a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6b022a06-cbde-4e80-b74a-82531a0a25d6"/>
+				</reportElement>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{stok}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="59" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
