@@ -69,32 +69,29 @@ public class admin extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "data gagal dipanggil"+e);
         }
     }
-      protected void autonumber(){
-        try{
-            String sql = "SELECT id_admin FROM nota ORDER BY id_admin asc";
-            Statement st = conn.createStatement();
-            ResultSet rs = st.executeQuery(sql);
-            txtid.setText("ADM0001");
-            while (rs.next()){
-                String idadmin = rs.getString("id_admin").substring(2);
-                int AN = Integer.parseInt(idadmin) + 1;
-                String Nol = "";
-                
-                if(AN<10)
-                {Nol = "000";}
-                else if(AN<100)
-                {Nol = "00";}
-                else if (AN<1000)
-                {Nol = "0";}
-                else if(AN<10000)
-                {Nol = "";}
-                
-                txtid.setText("ADM" + Nol + AN);
-            }            
-            }catch(Exception e){
-                JOptionPane.showMessageDialog(null, "Auto Number Gagal" +e);
-        }
+     protected void autonumber(){
+    try{
+        String sql = "SELECT id_admin FROM nota ORDER BY id_admin ASC";
+        Statement st = conn.createStatement();
+        ResultSet rs = st.executeQuery(sql);
+        txtid.setText("ADM0001");
+        while (rs.next()){
+            String idadmin = rs.getString("id_admin").substring(3); // ubah ke 3
+            int AN = Integer.parseInt(idadmin) + 1;
+            String Nol = "";
+
+            if(AN < 10) {Nol = "000";}
+            else if(AN < 100) {Nol = "00";}
+            else if(AN < 1000) {Nol = "0";}
+            else {Nol = "";}
+            
+            txtid.setText("ADM" + Nol + AN);
+        }            
+    }catch(Exception e){
+        JOptionPane.showMessageDialog(null, "Auto Number Gagal" + e);
     }
+}
+
 
     /**
      * This method is called from within the constructor to initialize the form.
