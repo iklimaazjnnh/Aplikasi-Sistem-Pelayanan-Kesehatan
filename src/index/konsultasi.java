@@ -700,7 +700,7 @@ catch (Exception e) {
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String fd = sdf.format(jtanggal.getValue());
         String sql = "insert into konsultasi values(?,?,?)";
-        String zsql = "insert into isi_konsultasi values(?,?,?,?,?)";
+        String zsql = "INSERT INTO isi_konsultasi (no_konsultasi, nik_pasien, gejala, tindakan, id_dokter) VALUES (?,?,?,?,?)";
         try{
              int t = tblkonsultasi.getRowCount();
              for(int i=0; i<t ; i++)
@@ -721,12 +721,12 @@ catch (Exception e) {
         String xtindakan = tblkonsultasi.getValueAt(i,5).toString();
 
                 
-        PreparedStatement stat2 = conn.prepareStatement(zsql);
-        stat2.setString(1, txtnotrx.getText());
-        stat2.setString(2, nikpasien);
-        stat2.setString(3, xnama_dokter);
-        stat2.setString(4, xgejala);
-        stat2.setString(5, xtindakan);
+PreparedStatement stat2 = conn.prepareStatement(zsql);
+stat2.setString(1, txtnotrx.getText());   // no_konsultasi
+stat2.setString(2, nikpasien);            // nik_pasien
+stat2.setString(3, xgejala);              // gejala
+stat2.setString(4, xtindakan);            // tindakan
+stat2.setString(5, xid_dokter);           // id_dokter (bukan nama_dokter!)
 
           
         stat2.executeUpdate();

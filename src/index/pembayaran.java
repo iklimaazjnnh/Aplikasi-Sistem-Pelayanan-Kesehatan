@@ -729,7 +729,8 @@ public class pembayaran extends javax.swing.JFrame {
      SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String fd = sdf.format(jtanggal.getValue());
         String sql = "insert into nota values(?,?,?,?)";
-        String zsql = "insert into isi_nota values(?,?,?,?,?,?)";
+        String zsql = "INSERT INTO isi_nota (id_nota, kode_obat, harga_obat, satuan_obat, qty, total_harga) VALUES (?,?,?,?,?,?)";
+
         try{
             
             PreparedStatement stat = conn.prepareStatement(sql);
@@ -749,16 +750,15 @@ public class pembayaran extends javax.swing.JFrame {
         String xqty = tblnota.getValueAt(i,4).toString();
         int total_harga = Integer.parseInt(xharga_obat) * Integer.parseInt(xqty);
                 
-        PreparedStatement stat2 = conn.prepareStatement(zsql);
-        stat2.setString(1, txtidnota.getText());
-        stat2.setString(2, xkode_obat);
-        stat2.setString(3, xharga_obat);
-        stat2.setString(4, xsatuan_obat);
-        stat2.setString(5, xqty);
-        stat2.setInt(6,total_harga);
-        
-        
-        stat2.executeUpdate();
+PreparedStatement stat2 = conn.prepareStatement(zsql);
+stat2.setString(1, txtidnota.getText());
+stat2.setString(2, xkode_obat);
+stat2.setString(3, xharga_obat);
+stat2.setString(4, xsatuan_obat);
+stat2.setString(5, xqty);
+stat2.setInt(6, total_harga);
+
+stat2.executeUpdate();
         }
     JOptionPane.showMessageDialog(null,"data berhasil disimpan");
 }
